@@ -1,0 +1,106 @@
+:root {
+  --main-bg-color: rgba(255, 255, 255, 0.438);
+  --animation-duration: 2s;
+  --square-size: 20px;
+  --square-animation-duration: 5s;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-image:  url(img/background.gif);
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  background: var(
+    --main-bg-color
+  ); /* Используем CSS-переменную для фона контейнера */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.824);
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background: white;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(to right top, #ff0080, #8000ff);
+  color: #fff;
+  cursor: pointer;
+}
+
+
+/* Адаптивный дизайн */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+
+
+
+.singkapvo-gesionalem {
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #f50b46;
+  padding: 25px 30px;
+  border: none;
+  color: #e4e4e4;
+  font-size: 23px;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  border-radius: 85px;
+}
+   
+.singkapvo-gesionalem span {
+position: relative;
+pointer-events: none;
+}
+   
+.singkapvo-gesionalem::before {
+  --size: 0;
+  content: '';
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, #4510dc, rgba(255, 255, 255, 0));
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: width .1s ease, height .3s ease;
+}
+   
+.singkapvo-gesionalem:hover::before {
+--size: 397px;
+}

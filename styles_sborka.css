@@ -1,0 +1,218 @@
+body {
+    background: url(img/background1.jpg);
+    color: #000000;
+    font-family: sans-serif;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+
+  ul {
+    list-style: none;
+  }
+  .navbar {
+    height: auto;
+    width: auto;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .dl_cl {
+    margin: 0;
+    padding: 24px 0 0 0;
+  }
+  
+  .dt_cl {
+    background: #b8c1c8;
+    border-bottom: 1px solid #989ea4;
+    border-top: 1px solid #717d85;
+    color: #fff;
+    font: bold 18px/21px Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 2px 0 0 12px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+  }
+  
+  .dd_cl {
+    font: bold 20px/45px Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0 0 0 12px;
+    white-space: nowrap;
+  }
+  
+  .navbar li {
+    margin-right: 20px;
+  }
+  
+  .navbar a {
+    text-decoration: dotted;
+    color: #ffffff;
+    padding: 5px 10px;
+    border: 1px solid #4b2e2e;
+    border-radius: 5px;
+  }
+  textarea {
+    width: 100%;
+  }
+  
+  :root {
+    --white: #f9f9f9;
+    --black: #36383f;
+    --gray: #85888c;
+  .header {
+    height: 80px;
+    background-color: var(--black);
+    box-shadow: 1px 1px 5px 0px var(--gray);
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
+  .logo {
+    display: inline-block;
+    color: var(--white);
+    font-size: 60px;
+    margin-left: 10px;
+  }
+  .nav {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: var(--black);
+    overflow: hidden;
+  }
+  .menu a {
+    display: block;
+    padding: 30px;
+    color: var(--white);
+  }
+  .menu a:hover {
+    background-color: var(--gray);
+  }
+  .nav {
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+  }
+  .hamb {
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+  } /* Style label tag */
+  
+  .hamb-line {
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+  } /* Style span tag */
+  
+  .hamb-line::before,
+  .hamb-line::after {
+    background: var(--white);
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+  }
+  .hamb-line::before {
+    top: 5px;
+  }
+  .hamb-line::after {
+    top: -5px;
+  }
+  
+  .side-menu {
+    display: none;
+  }
+  .side-menu:checked ~ nav {
+    max-height: 100%;
+  }
+  .side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+  }
+  .side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  .side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  @media (min-width: 767px) {
+    .nav {
+      max-height: none;
+      top: 0;
+      position: relative;
+      float: right;
+      width: fit-content;
+    }
+    .menu li {
+      float: left;
+    }
+    .menu a:hover {
+      background-color: transparent;
+      color: var(--gray);
+    }
+  
+    .hamb {
+      display: none;
+    }
+  }
+}
+
+
+h1 { text-align:center; }
+p.main { text-align:justify; } 
+p { text-indent:30px; } 
+
+.product{
+  width: 250px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  background-color: #fff;
+}
+.product img{
+  height: 200px;
+  width: 100%;
+}
+
+.products{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+.product button{
+  background-color: #c5f7d4; /* Цвет фона кнопки */
+  color: rgb(0, 0, 0); /* Цвет текста на кнопке */
+  padding: 10px 20px; /* Отступы внутри кнопки */
+  border: 4px;
+  color: black;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+}
+@media (max-width: 767px){
+  .products{
+    flex-direction: column;
+  }
+  .product{
+    width: 100%;
+  }
+  
+}
+
+.scrin{
+  border: 4px;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+}
+
