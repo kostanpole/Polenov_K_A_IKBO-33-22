@@ -145,27 +145,7 @@ body {
     transform: rotate(45deg);
     top: 0;
   }
-  @media (min-width: 767px) {
-    .nav {
-      max-height: none;
-      top: 0;
-      position: relative;
-      float: right;
-      width: fit-content;
-    }
-    .menu li {
-      float: left;
-    }
-    .menu a:hover {
-      background-color: transparent;
-      color: var(--gray);
-    }
-  
-    .hamb {
-      display: none;
-    }
-  }
-}
+
 
 
 h1 { text-align:center; }
